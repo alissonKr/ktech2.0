@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +34,35 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: <Widget>[
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                FaIcon(
+                  FontAwesomeIcons.facebook,
+                  size: 23,
+                  color: Colors.cyan,
+                ),
+                FaIcon(
+                  FontAwesomeIcons.instagram,
+                  size: 23,
+                  color: Colors.cyan,
+                ),
+                FaIcon(
+                  FontAwesomeIcons.linkedin,
+                  size: 23,
+                  color: Colors.cyan,
+                ),
+                FaIcon(
+                  FontAwesomeIcons.whatsapp,
+                  size: 23,
+                  color: Colors.cyan,
+                )
+              ],
+            ),
+          ),
+        ],
         backgroundColor: Colors.black,
         leading: Container(
             decoration: const BoxDecoration(
@@ -46,27 +76,30 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Column(
             children: [
-              Container(
-                width: 450,
-                height: 400,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/cloud2.jpg'),
-                )),
-              ),
-              Container(
-                  width: 450,
-                  height: 400,
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage('assets/images/codding.jpg'),
-                  ))),
+              images('assets/images/cloud2.jpg'),
+              images('assets/images/codding.jpg'),
             ],
           ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class images extends StatelessWidget {
+  final String foto;
+  const images(this.foto, {Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 450,
+      height: 400,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+        fit: BoxFit.cover,
+        image: AssetImage(foto),
+      )),
     );
   }
 }
