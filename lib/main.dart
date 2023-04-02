@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Kavinsky Tech'),
     );
@@ -33,11 +33,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         leading: Container(
             decoration: const BoxDecoration(
                 image: DecorationImage(
           // fit: BoxFit.cover,
-          image: AssetImage('assets/images/ktech_logo.png'),
+          image: AssetImage('assets/images/ktechlogo.png'),
         ))),
         title: Text(widget.title),
       ),
@@ -49,34 +50,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 450,
                 height: 400,
                 decoration: const BoxDecoration(
-                    color: Colors.transparent,
                     image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage('assets/images/cloud2.jpg'),
-                    )),
+                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/cloud2.jpg'),
+                )),
               ),
-              const SizedBox(
-                width: 250,
-                height: 200,
-                child: Text('texto'),
-              )
+              Container(
+                  width: 450,
+                  height: 400,
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage('assets/images/codding.jpg'),
+                  ))),
             ],
           ),
-          Container(
-            color: Colors.grey,
-            height: 150,
-            width: 450,
-          ),
-          Container(
-            color: Colors.white,
-            height: 150,
-            width: 450,
-          ),
-          Container(
-            color: Colors.grey,
-            height: 150,
-            width: 450,
-          )
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
