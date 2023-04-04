@@ -33,6 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         actions: [
           Row(
@@ -76,8 +77,10 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Column(
             children: [
-              images('assets/images/cloud2.jpg'),
-              images('assets/images/codding.jpg'),
+              images('assets/images/cloud2.jpg',
+                  'A enfermeira diz ao médico: - Tem um homem invisível na sala de espera. O médico responde: - Diga a ele que não posso vê-lo agora.'),
+              images('assets/images/codding.jpg',
+                  'Porque o Batman colocou o Bat-móvel no seguro? R.: Porque ele tem medo que Robin'),
             ],
           ),
         ],
@@ -88,7 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 class images extends StatelessWidget {
   final String foto;
-  const images(this.foto, {Key? key}) : super(key: key);
+  final String text;
+  const images(this.foto, this.text, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -96,10 +100,24 @@ class images extends StatelessWidget {
       width: 450,
       height: 400,
       decoration: BoxDecoration(
+          border: Border.all(color: Colors.black, width: 2),
+          borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
-        fit: BoxFit.cover,
-        image: AssetImage(foto),
-      )),
+            fit: BoxFit.cover,
+            image: AssetImage(foto),
+          )),
+      child: Padding(
+        padding: const EdgeInsets.all(40),
+        child: Text(text,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontSize: 20,
+                fontFamily: 'RobotoMono',
+                foreground: Paint()
+                  ..style = PaintingStyle.stroke
+                  ..strokeWidth = 2
+                  ..color = Colors.white60)),
+      ),
     );
   }
 }
