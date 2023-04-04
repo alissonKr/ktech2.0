@@ -34,34 +34,34 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: <Widget>[
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                FaIcon(
-                  FontAwesomeIcons.facebook,
-                  size: 23,
-                  color: Colors.cyan,
-                ),
-                FaIcon(
-                  FontAwesomeIcons.instagram,
-                  size: 23,
-                  color: Colors.cyan,
-                ),
-                FaIcon(
-                  FontAwesomeIcons.linkedin,
-                  size: 23,
-                  color: Colors.cyan,
-                ),
-                FaIcon(
-                  FontAwesomeIcons.whatsapp,
-                  size: 23,
-                  color: Colors.cyan,
-                )
-              ],
-            ),
-          ),
+        actions: [
+          Row(
+            children: [
+              FaIcon(
+                FontAwesomeIcons.facebook,
+                size: 23,
+                color: Colors.cyan,
+              ),
+              SizedBox(width: 10),
+              FaIcon(
+                FontAwesomeIcons.instagram,
+                size: 23,
+                color: Colors.cyan,
+              ),
+              SizedBox(width: 10),
+              FaIcon(
+                FontAwesomeIcons.linkedin,
+                size: 23,
+                color: Colors.cyan,
+              ),
+              SizedBox(width: 10),
+              FaIcon(
+                FontAwesomeIcons.whatsapp,
+                size: 23,
+                color: Colors.cyan,
+              )
+            ],
+          )
         ],
         backgroundColor: Colors.black,
         leading: Container(
