@@ -13,13 +13,13 @@ class InitialScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        actions: const [iconsAppBar()],
+        actions: const [IconsAppBar()],
         backgroundColor: Colors.black,
         leading: Container(
             decoration: const BoxDecoration(
                 image: DecorationImage(
           // fit: BoxFit.cover,
-          image: AssetImage('assets/images/ktechlogo.pzeng'),
+          image: AssetImage('assets/images/ktechlogo.png'),
         ))),
         title: Text(title),
       ),
