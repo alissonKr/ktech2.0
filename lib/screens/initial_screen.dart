@@ -27,10 +27,12 @@ class InitialScreen extends StatelessWidget {
         children: [
           Column(
             children: const [
-              blocks('assets/images/cloud2.jpg',
-                  'A enfermeira diz ao médico: - Tem um homem invisível na sala de espera. O médico responde: - Diga a ele que não posso vê-lo agora.'),
-              blocks('assets/images/codding.jpg',
-                  'Porque o Batman colocou o Bat-móvel no seguro? R.: Porque ele tem medo que Robin'),
+              blocks(
+                  'A enfermeira diz ao médico: - Tem um homem invisível na sala de espera. O médico responde: - Diga a ele que não posso vê-lo agora.',
+                  'assets/images/mundo.gif'),
+              blocks(
+                  'Porque o Batman colocou o Bat-móvel no seguro? R.: Porque ele tem medo que Robin',
+                  'assets/images/rede.gif'),
             ],
           ),
         ],
