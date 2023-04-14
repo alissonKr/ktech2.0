@@ -1,30 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
-class blocks extends StatelessWidget {
-  final String text;
+class block2 extends StatelessWidget {
   final String videoPath;
 
-  const blocks(this.text, this.videoPath, {Key? key}) : super(key: key);
+  const block2(this.videoPath, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: VideoContainer(videoPath: videoPath),
+      child: VideoContainer2(videoPath: videoPath),
     );
   }
 }
 
-class VideoContainer extends StatefulWidget {
+class VideoContainer2 extends StatefulWidget {
   final String videoPath;
 
-  const VideoContainer({Key? key, required this.videoPath}) : super(key: key);
+  const VideoContainer2({Key? key, required this.videoPath}) : super(key: key);
 
   @override
-  _VideoContainerState createState() => _VideoContainerState();
+  _VideoContainer2State createState() => _VideoContainer2State();
 }
 
-class _VideoContainerState extends State<VideoContainer> {
+class _VideoContainer2State extends State<VideoContainer2> {
   late VideoPlayerController _controller;
   bool _isPlaying = false;
 

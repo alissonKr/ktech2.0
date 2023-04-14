@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../blocks.dart';
+import '../components/block1/block1.dart';
+import '../components/block2/block2.dart';
 import '../components/icons_app_bar.dart';
 
 class InitialScreen extends StatelessWidget {
@@ -24,11 +25,12 @@ class InitialScreen extends StatelessWidget {
         title: Text(title),
       ),
       body: ListView(
+        shrinkWrap: true,
         children: [
           Column(
-            children: const [
-              blocks('lalallalal', 'assets/images/mundo.mp4'),
-              blocks('lalal', 'assets/images/rede.mp4'),
+            children: [
+              block1('assets/video1/mundo.mp4'),
+              block2('assets/video2/rede.mp4'),
             ],
           ),
         ],
