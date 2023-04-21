@@ -8,9 +8,22 @@ class block1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: VideoContainer1(videoPath: videoPath),
-    );
+    return Stack(children: [VideoContainer1(videoPath: videoPath),   Positioned.fill(
+      child: Container(
+        color: Colors.transparent,
+        width: 150,
+        height: 150,
+        child: const Center(
+          child: Text(
+            'Meu texto',
+            style: TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+    ),]);
   }
 }
 

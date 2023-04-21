@@ -8,9 +8,7 @@ class block2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: VideoContainer2(videoPath: videoPath),
-    );
+    return VideoContainer2(videoPath: videoPath);
   }
 }
 
